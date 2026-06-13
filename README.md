@@ -60,8 +60,14 @@ directly — nothing breaks.
 
 ## Custom domain (Squarespace DNS)
 
-The repo already contains a `CNAME` file with `compassionplushope.org`.
-In the Squarespace domain DNS settings add:
+The repo already contains a `CNAME` file with `compassionplushope.org` and the
+Pages custom domain is set. In Squarespace **Domains → DNS Settings**:
+
+1. **Delete the "Squarespace Defaults" preset** (trash icon). Its A records
+   (`198.x`), the `www → ext-sq.squarespace.com` CNAME and the HTTPS record all
+   point at Squarespace hosting and conflict with GitHub Pages.
+2. (Optional) delete the "Squarespace Domain Connect" preset (`_domainconnect`).
+3. Add these **custom records**:
 
 ```
 Type   Host   Value
@@ -72,8 +78,14 @@ A      @      185.199.111.153
 CNAME  www    levshacoua.github.io
 ```
 
-Then in the repo: **Settings → Pages → Custom domain** = `compassionplushope.org`,
-and enable **Enforce HTTPS** once the certificate is issued.
+Optional IPv6 (AAAA, host `@`): `2606:50c0:8000::153`, `2606:50c0:8001::153`,
+`2606:50c0:8002::153`, `2606:50c0:8003::153`.
+
+> Keep any MX / TXT records if email is ever set up on this domain (none today —
+> contact email is a Gmail address).
+
+After propagation GitHub issues a certificate; then enable **Enforce HTTPS**
+(Settings → Pages).
 
 ## Photography note
 
