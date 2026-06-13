@@ -209,6 +209,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 .badge {
   display: inline-flex;
+  align-self: flex-start;
   padding: 8px 16px;
   border-radius: var(--r-sm);
   font-weight: 700;
@@ -561,7 +562,9 @@ ul { margin: 0; padding: 0; list-style: none; }
   gap: 16px;
   padding: 24px 28px;
   border-radius: var(--r-lg);
+  min-width: 0;
 }
+.contact-card > span { min-width: 0; overflow-wrap: anywhere; }
 .contact-card--line { border: 1px solid var(--navy-10); background: #fff; }
 .contact-card--amber { background: var(--amber); color: #fff; }
 .contact-card__icon { width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; background: var(--teal); flex: none; }
@@ -592,10 +595,10 @@ ul { margin: 0; padding: 0; list-style: none; }
   position: relative;
   min-height: 460px;
   display: grid;
-  place-items: center;
+  place-items: start center;
   text-align: center;
   color: #fff;
-  padding: 80px 24px;
+  padding: 40px 24px;
   overflow: hidden;
 }
 .quote-band__bg { position: absolute; inset: 0; }
@@ -618,6 +621,21 @@ ul { margin: 0; padding: 0; list-style: none; }
 .footer__col h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; color: #808080; text-transform: uppercase; margin-bottom: 4px; }
 .footer__col a, .footer__col p { display: block; font-size: 14px; color: #b3b3b3; padding-block: 6px; }
 .footer__col a:hover { color: #fff; }
+/* Donate button in footer: hugs content on desktop, full width on mobile */
+.footer__col a.btn { display: inline-flex; color: #fff; padding-block: 0; }
+/* Facebook (and future social) icon button */
+.footer__col a.footer__social {
+  display: inline-flex;
+  width: 40px; height: 40px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  color: #b3b3b3;
+}
+.footer__col a.footer__social:hover { color: #fff; border-color: #fff; }
+.footer__social svg { width: 20px; height: 20px; }
 .footer__bottom {
   max-width: var(--container);
   margin: 48px auto 0;
@@ -669,4 +687,11 @@ ul { margin: 0; padding: 0; list-style: none; }
   .footer__grid { grid-template-columns: 1fr; gap: 32px; }
   .story { min-height: 520px; padding: 32px; }
   .hero__content { padding: 80px 20px; }
+  /* center icon + text inside cards on small screens */
+  .info-card, .feature { align-items: center; text-align: center; }
+  /* CTA banner buttons fill the container */
+  .cta-band .hero__actions { width: 100%; flex-direction: column; align-items: stretch; }
+  .cta-band .hero__actions .btn { width: 100%; }
+  /* footer Donate button spans full width on mobile */
+  .footer__col a.btn { display: flex; width: 100%; }
 }

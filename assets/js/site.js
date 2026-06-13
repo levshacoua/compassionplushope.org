@@ -102,10 +102,8 @@
       '<a href="tel:+15550000000">+1 (555) 000-0000</a>' +
       "<p>WhatsApp</p></div>" +
       '<div class="footer__col"><h4>Follow Us</h4>' +
-      '<a href="#" rel="noopener">Facebook</a>' +
-      '<a href="#" rel="noopener">Instagram</a>' +
-      '<a href="#" rel="noopener">YouTube</a>' +
-      '<a class="btn btn--primary btn--sm" style="margin-top:12px" href="' + CONFIG.paypal + '" target="_blank" rel="noopener" data-donate>Donate Now</a>' +
+      '<a class="footer__social" href="#" aria-label="Facebook" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 21v-7h2.4l.45-2.9H14V9.2c0-.84.28-1.42 1.5-1.42L17 7.77V5.2c-.29-.04-1.27-.13-2.41-.13-2.39 0-4.02 1.46-4.02 4.13v2.3H8.2V14h2.37v7H14z"/></svg></a>' +
+      '<a class="btn btn--primary btn--sm" style="margin-top:16px" href="' + CONFIG.paypal + '" target="_blank" rel="noopener" data-donate>Donate Now</a>' +
       "</div>" +
       "</div>" +
       '<div class="footer__bottom">' +
