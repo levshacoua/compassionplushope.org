@@ -11,8 +11,7 @@
     paypal: "https://www.paypal.com/donate/?hosted_button_id=DW37UVCMRA8RA",
     email: "compassionplushope@gmail.com",
     // Web3Forms access key tied to compassionplushope@gmail.com.
-    // Replace this placeholder with the real key from web3forms.com.
-    web3formsKey: "REPLACE_WITH_WEB3FORMS_ACCESS_KEY"
+    web3formsKey: "89ea0a8e-4739-4cbb-b317-dcfa879c6cfe"
   };
 
   /* Resolve asset prefix so the site works from /, subpages and locally */
